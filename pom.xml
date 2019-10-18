@@ -28,6 +28,12 @@
         <artifactId>json-path</artifactId>
         <scope>test</scope>
       </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java8</artifactId>
+            <version>4.7.1</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <properties>
