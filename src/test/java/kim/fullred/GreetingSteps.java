@@ -1,8 +1,7 @@
 package kim.fullred;
 
-import cucumber.api.java8.En;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import org.junit.Assert;
 
 import java.io.BufferedReader;
@@ -30,7 +29,7 @@ public class GreetingSteps {
         ObjectStore.getInstance().put("response", response.toString());
     }
 
-    @Then("a greeting will be returned")
+    @Then("a default greeting will be returned")
     public void aGreetingWillBeReturned() {
         String response = ObjectStore.getInstance().get("response");
         Assert.assertTrue(response.contains("Hello, World!"));
