@@ -5,16 +5,7 @@ public class ObjectStore {
 
     private HashMap<String, Object> store;
 
-    private static ObjectStore instance;
-
-    public static ObjectStore getInstance(){
-        if(instance == null){
-            instance = new ObjectStore();
-        }
-        return instance;
-    }
-
-    private ObjectStore() {
+    public ObjectStore() {
         this.store = new HashMap<>();
     }
 
