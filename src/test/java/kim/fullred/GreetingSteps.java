@@ -4,14 +4,6 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
-import java.net.URL;
-
 public class GreetingSteps {
 
     private GreetingHelper greetingHelper;
@@ -38,11 +30,13 @@ public class GreetingSteps {
     public void userSendAGetRequestToTheGreetingEndpointWithName(String name) {
         String response = greetingHelper.doGetRequest(name);
         objectStore.put("response", response);
+        objectStore.put("name", name);
     }
 
-    @Then("a greeting will be returned with name {string}")
-    public void aGreetingWillBeReturnedWithName(String name) {
+    @Then("a greeting will be returned with the same name")
+    public void aGreetingWillBeReturnedWithTheSameName() {
         String response = objectStore.get("response");
+        String name = objectStore.get("name");
         Assert.assertTrue(response.contains(String.format("Hello, %s", name)));
     }
 }

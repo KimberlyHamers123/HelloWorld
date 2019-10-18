@@ -6,4 +6,4 @@ Feature: Greet
 
   Scenario: Succesful greeting with name
     When user send a get request to the greeting endpoint with name "anita"
-    Then a greeting will be returned with name "anita"
+    Then a greeting will be returned with the same name
