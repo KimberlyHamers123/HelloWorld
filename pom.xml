@@ -4,7 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>kim-fullred</groupId>
     <artifactId>kim-helloworld</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>app</module>
+        <module>appTest</module>
+    </modules>
     <name>kim-helloworld</name>
 
     <parent>
@@ -32,6 +37,18 @@
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>4.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
